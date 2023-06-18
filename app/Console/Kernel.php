@@ -33,7 +33,7 @@ class Kernel extends ConsoleKernel
         $schedule->command(ResetUsagesCommand::class)->daily();
         $schedule->command(PruneUsersCommand::class)->daily();
         $schedule->command(UpdateUsagesCommand::class)->everyFiveMinutes();
-        $schedule->command(UpdateRateLimitsCommand::class)->everyTenMinutes();
+        $schedule->command(UpdateRateLimitsCommand::class)->everyFiveMinutes();
     }
 
     /**
